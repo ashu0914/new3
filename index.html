@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For Jaya | My Sanctuary</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600&family=Montserrat:wght@200;300;400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Hidden Audio Loop -->
+    <audio id="bg-music" src="bg-music.mp3" loop></audio>
+
+    <!-- FLOATING CUTE MASCOT WITH EXPRESSIONS -->
+    <div id="cartoon-container" class="hidden-mascot">
+        <div class="bubble-speech" id="speech-bubble">Hi Jaya! ✨</div>
+        <svg class="cute-mascot" id="mascot-svg" viewBox="0 0 100 100">
+            <!-- Body / Heart Shape -->
+            <path class="mascot-body" d="M50,25 C35,5 10,20 10,45 C10,70 50,95 50,95 C50,95 90,70 90,45 C90,20 65,5 50,25 Z"/>
+            <!-- Eyes (With Blinking Animation) -->
+            <g class="eyes">
+                <ellipse id="left-eye" cx="38" cy="45" rx="4" ry="4" fill="#fff"/>
+                <ellipse id="right-eye" cx="62" cy="45" rx="4" ry="4" fill="#fff"/>
+            </g>
+            <!-- Blush Circles -->
+            <circle cx="30" cy="53" r="5" fill="#e63946" opacity="0.6"/>
+            <circle cx="70" cy="53" r="5" fill="#e63946" opacity="0.6"/>
+            <!-- Mouth Curve (Morphs dynamically via JS) -->
+            <path id="mouth" d="M44,54 Q50,58 56,54" stroke="#fff" stroke-width="3" stroke-linecap="round" fill="none"/>
+        </svg>
+    </div>
+
+    <!-- INTRO SCREEN -->
+    <div id="intro-overlay">
+        <div class="intro-content">
+            <h1 class="love-title">J A Y A</h1>
+            <div class="divider"></div>
+            <p class="intro-subtitle">A universe in a single soul</p>
+            <button id="enter-btn">Begin the Experience</button>
+        </div>
+    </div>
+
+    <!-- MAIN PLATFORM -->
+    <div id="main-content" class="hidden">
+        
+        <!-- Floating Romantic Navbar -->
+        <nav class="navbar">
+            <div class="logo">J A Y A</div>
+            <div class="nav-links">
+                <a href="#home">The Realization</a>
+                <a href="#essence">The Details</a>
+                <a href="#heart">My Heart</a>
+            </div>
+        </nav>
+
+        <!-- SECTION 1: THE MUSE (Cinematic Zoom Cover) -->
+        <section id="home" class="hero-section">
+            <div class="hero-image-wrapper">
+                <img src="assets/pic1.jpg" alt="Jaya Cover" class="hero-img slow-zoom">
+                <div class="hero-gradient"></div>
+            </div>
+            <div class="hero-text-container">
+                <h2 class="title-large">Mesmerizing.</h2>
+                <p class="subtitle-premium">Some people make the world quieter, softer, and infinitely more beautiful just by existing in it.</p>
+            </div>
+        </section>
+
+        <!-- SECTION 2: THE ESSENCE (Deeply Intimate Visual Poem) -->
+        <section id="essence" class="essence-section">
+            <div class="showcase-container">
+                <!-- Photo 2 -->
+                <div class="showcase-row reveal-element reveal-left">
+                    <div class="showcase-img-box">
+                        <img src="assets/pic2.jpg" alt="Jaya">
+                    </div>
+                    <div class="showcase-desc">
+                        <h4>Your Light</h4>
+                        <p>It’s the effortless way you bring warmth into cold spaces, turning ordinary moments into unforgettable poetry.</p>
+                    </div>
+                </div>
+
+                <!-- Photo 3 -->
+                <div class="showcase-row reverse reveal-element reveal-right">
+                    <div class="showcase-desc">
+                        <h4>Your Horizon</h4>
+                        <p>Looking at you is like looking at a sunset—comforting, completely consuming, and a beautiful escape from everything else.</p>
+                    </div>
+                    <div class="showcase-img-box">
+                        <img src="assets/pic3.jpg" alt="Jaya Portrait">
+                    </div>
+                </div>
+
+                <!-- Photo 4 -->
+                <div class="showcase-row reveal-element reveal-left">
+                    <div class="showcase-img-box">
+                        <img src="assets/pic4.jpg" alt="Jaya Aesthetic">
+                    </div>
+                    <div class="showcase-desc">
+                        <h4>The Calm</h4>
+                        <p>In a world full of noise and chaos, your presence is the only melody that makes perfect, peaceful sense.</p>
+                    </div>
+                </div>
+
+                <!-- Photo 5 -->
+                <div class="showcase-row reverse reveal-element reveal-right">
+                    <div class="showcase-desc">
+                        <h4>The Whole</h4>
+                        <p>Every glance, every expression—a completely flawless masterpiece that leaves me speechless every single time.</p>
+                    </div>
+                    <div class="showcase-img-box">
+                        <img src="assets/pic5.jpg" alt="Jaya Dream">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 3: THE HEART (The Confession Wrapped in a Gift) -->
+        <section id="heart" class="heart-section">
+            <div class="heart-card reveal-element reveal-up">
+                <h3 class="love-title-small">To Jaya</h3>
+                
+                <p class="heart-text">
+                    They say friendship is about finding someone you can talk to. But with you, it became something entirely different. It became the highlights of my days, the comfort in my quiet moments, and a deep affection that I carry with me everywhere I go.
+                </p>
+                <p class="heart-text">
+                    You are my favorite thought, my most treasured person, and a beautiful piece of magic I never want to lose. 
+                </p>
+
+                <p class="happy-fd">Happy Friendship Day, My Favorite Soul. ❤️</p>
+                
+                <button id="mute-btn" class="audio-control">🔊 Pause Melody</button>
+            </div>
+        </section>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
